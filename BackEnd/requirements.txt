@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+pyspark
+pymongo==4.6.1

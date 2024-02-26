@@ -1,0 +1,34 @@
+
+Chạy lệnh này để build image (với tên phù hợp để push lên dockerhub)
+>> docker build -t giahuy105/fastapi-app:latest .
+
+Đẩy lên docker hub
+>> docker push giahuy105/fastapi-app:latest
+
+Tạo namespace trong k8s
+>> kubectl create namespace fastapi-backend
+
+Chạy lệnh này để tạo pod trên k8s
+>> kubectl apply -f deploy.yaml
+
+
+Do hạn chế của docker trên window muốn mở một service thì phải mở một 
+terminal để có thể chạy được dịch vụ
+>> minikube service project-phuc-service --url
+
+Thêm repo với helm
+>> helm repo add bitnami-repo https://charts.bitnami.com/bitnami
+
+Triển khai spark cluster với helm
+>> helm install spark-release bitnami-repo/spark --set worker.replicaCount=1
+
+
+
+
+kubectl port-forward service/jupiter-spark-svc 7080:8888
+
+
+
+
+
+
